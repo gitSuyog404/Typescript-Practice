@@ -1,4 +1,5 @@
 // #Generic
+// Syntax -            < >
 // We can put any type and it will change the value
 // Generics helps to give more type definitions
 // TO understand in my own word:
@@ -40,3 +41,18 @@
 // }
 
 // identityFour<Bottle>({});
+
+// function getSearchProducts<T>(products: T[]): T {
+//   // do some database operations
+//   const myIndex = 3;
+//   return products[myIndex];
+// }
+
+// Creating the same function in arrow function
+
+// You will see alot generic being defined as syntax <T,>  the "," is to mention that the given <T> is other tags but a generic
+// let getSearchProducts = <T>(products: T[]): T => {
+// Do some database operations
+//   let myIndex = 10;
+//   return products[myIndex];
+// };
