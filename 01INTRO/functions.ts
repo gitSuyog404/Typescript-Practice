@@ -116,3 +116,5 @@
 // export {};
 
 // 1:15:33
+
+// The let keyword being changed into var after the code is compiled can be changed in typescript config file.
