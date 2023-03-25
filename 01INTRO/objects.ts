@@ -48,3 +48,43 @@
 // createUser({ name: "", email: "", isActive: true });
 
 // export {};
+
+// # READONLY and optional
+
+//  "readonly" keyword
+//  when you precede it with this keyword you wont be able to change it
+// type User = {
+//   readonly _id: string;
+//   name: string;
+//   email: string;
+// isOnline: boolean;
+//   Maybe you want to have something like registered credit card
+// Using ? after it will make it optional
+//   creditCardDetails?: number;
+// };
+
+// let myUser: User = {
+//   _id: "58340923",
+//   name: "Wick",
+//   email: "wick@gmail.com",
+//   isOnline: false,
+// };
+
+// type cardNumber ={
+//   cardNum : string;
+
+// }
+
+// type cardDate ={
+//   cardDate: string;
+// }
+
+// type cardDetails = cardNumber & cardDate & {
+//   cvv: number
+// }
+
+// myUser.email = "wick12@gmail.com";
+// You cannot change _id as you have preceeded it with readonly
+// myUser._id = "123";
+
+// 1:37:56
