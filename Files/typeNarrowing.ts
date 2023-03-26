@@ -20,13 +20,59 @@
 
 // # The in operator narrowing
 
-interface User {
-  name: string;
-  email: string;
-}
+// interface User {
+//   name: string;
+//   email: string;
+// }
 
-interface Admin {
-  name: string;
-  email: string;
-  isAdmin: boolean;
-}
+// interface Admin {
+//   name: string;
+//   email: string;
+//   isAdmin: boolean;
+// }
+
+// let isAdminAcc = (account: User|Admin) =>{
+//     if("isAdmin" in account){
+//         return account.isAdmin
+//     }
+// }
+
+// ! These topics also fall under narrowing
+// # Instanceof and Type Predicates
+// # instanceof narrowing
+// it can only be used where there is a new keyword or has a potential of having a new keyword
+// It is almost the same as typeof
+// typeof checks for the default types and instanceof checks whether an object was an instance of the class
+// let logValue = (x: Date | string) => {
+//   if (x instanceof Date) {
+//     console.log(x.toUTCString());
+//   } else {
+//     console.log(x.toUpperCase());
+//   }
+// };
+
+// # type predicates
+
+// type Fish = {
+//   swim: () => void;
+// };
+
+// type Bird = {
+//   fly: () => void;
+// };
+
+// let isFish = (pet: Fish | Bird): pet is Fish => {
+//   return (pet as Fish).swim !== undefined;
+// };
+
+// let getFood = (pet: Fish | Bird) => {
+//   if (isFish(pet)) {
+// Here typescript is still confused whether the pet is fish or bird so we type cast in the isFish function
+//  : pet is Fish      // this declares it not as true value return but a fish which solves the problem of typescript being confused over fish or bird
+//     pet;
+//     return "fish food";
+//   } else {
+//     pet;
+//     return "bird food";
+//   }
+// };
