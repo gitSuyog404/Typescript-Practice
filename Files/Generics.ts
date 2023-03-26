@@ -42,6 +42,8 @@
 
 // identityFour<Bottle>({});
 
+// # Generics in Arrays and making functions using arrow functions with generics
+// understanding arrow function syntax with generics included
 // function getSearchProducts<T>(products: T[]): T {
 //   // do some database operations
 //   const myIndex = 3;
@@ -56,3 +58,41 @@
 //   let myIndex = 10;
 //   return products[myIndex];
 // };
+
+// 3:56:05
+
+// # Generic Classes
+
+// interface Database {
+//   connection: string;
+//   username: string;
+//   password: string;
+// }
+
+// let genericOne = <T, U extends Database>(valOne: T, valTwo: U): object => {
+//   return {
+//     valOne,
+//     valTwo,
+//   };
+// };
+
+// genericOne(1, {});
+
+// interface Quiz {
+//   name: string;
+//   type: string;
+// }
+
+// interface Course {
+//   name: string;
+//   author: string;
+//   subject: string;
+// }
+
+// class Selling<T> {
+//   public cart: T[] = [];
+
+//   addTocart(products: T) {
+//     this.cart.push(products);
+//   }
+// }
