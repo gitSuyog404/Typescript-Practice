@@ -76,3 +76,48 @@
 //     return "bird food";
 //   }
 // };
+
+// # Discriminated Union and Exhaustiveness CHecking with never
+
+// interface Circle {
+//   kind: "circle";
+//   radius: number;
+// }
+
+// interface Square {
+//   kind: "square";
+//   side: number;
+// }
+
+// interface Rectangle {
+//   kind: "rectangle";
+//   length: number;
+//   width: number;
+// }
+
+// type Shape = Circle | Square | Rectangle;
+
+// let getTrueShape = (shape: Shape) => {
+//   if (shape.kind === "circle") {
+//     return Math.PI * shape.radius ** 2;
+//   }
+// };
+
+// 4:37:36
+
+// let getArea = (shape: Shape) => {
+// Since it causes error it is recommended in the documentation that there should be a default with type never
+//   switch (shape.kind) {
+//     case "circle":
+//       return Math.PI * shape.radius ** 2;
+
+//     case "square":
+//       return shape.side * shape.side;
+
+//     case "rectangle":
+//       return shape.length * shape.width;
+//     default:
+//       const _exhaustiveCheck: never = shape;
+//       return _exhaustiveCheck;
+//   }
+// };
